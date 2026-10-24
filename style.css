@@ -1,0 +1,27 @@
+:root{--brand:#5B45E0;--bg:#fff;--fg:#1c1b29;--muted:#5d5b73;--card:#f5f3ff;--line:#e3e0f5;--notice:#fff7e0;--noticefg:#5a4300}
+@media (prefers-color-scheme:dark){:root{--brand:#8f7dff;--bg:#13121c;--fg:#ececf6;--muted:#a8a6bd;--card:#1d1b2d;--line:#2e2b45;--notice:#2b2410;--noticefg:#f3dc9a}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.65;font-size:16px}
+.wrap{max-width:780px;margin:0 auto;padding:0 20px}
+header.site{border-bottom:1px solid var(--line);background:var(--card)}
+header.site .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px}
+.brand{font-weight:800;font-size:1.2rem;color:var(--brand);text-decoration:none}
+nav{display:flex;flex-wrap:wrap;gap:4px 18px}
+nav a{color:var(--fg);text-decoration:none;font-weight:600;font-size:.95rem}
+nav a[aria-current],nav a:hover{color:var(--brand)}
+main{padding-top:28px;padding-bottom:40px}
+h1{font-size:clamp(1.6rem,4vw,2.2rem);line-height:1.2;margin:.2em 0 .6em;font-weight:800}
+h2{font-size:1.25rem;margin:2em 0 .5em;color:var(--brand)}
+h3{font-size:1.05rem;margin:1.5em 0 .4em}
+a{color:var(--brand)}
+.lead{font-size:1.15rem;color:var(--muted)}
+.notice{background:var(--notice);color:var(--noticefg);border-left:4px solid var(--brand);padding:12px 16px;border-radius:8px;margin:16px 0}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--card)}
+.cards{list-style:none;padding:0;display:grid;gap:12px}
+.cards a{display:block;padding:16px;border:1px solid var(--line);border-radius:12px;background:var(--card);text-decoration:none;color:var(--fg)}
+.cards a:hover{border-color:var(--brand)}
+.cards span{display:block;color:var(--muted);font-size:.92rem}
+footer{border-top:1px solid var(--line);padding-top:16px;padding-bottom:32px;color:var(--muted);font-size:.9rem}

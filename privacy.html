@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nexso Vault Privacy Policy | Nexso Vault</title>
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site"><div class="wrap"><a class="brand" href="index.html">Nexso Vault</a><nav><a href="index.html">Home</a><a href="privacy.html" aria-current="page">Privacy</a><a href="terms.html">Terms</a><a href="delete-account.html">Delete account</a></nav></div></header>
+<main class="wrap">
+<h1>Nexso Vault Privacy Policy</h1>
+<p><strong>Last updated: October 24, 2026</strong></p>
+<p>Nexso Vault ("the App") is operated by <strong>Nexso Labs</strong> ("we", "us"). Contact: support@nexsolabs.com.</p>
+<p>This policy explains what the App does with your information. The App contains <strong>no advertising</strong> and we do not sell your personal information.</p>
+<h2>1. Summary</h2>
+<ul>
+<li>Your documents are stored on your device in encrypted form. You can use the core features without an account.</li>
+<li>If you create an account and turn on cloud backup or family sharing, your document data is encrypted on your device before upload. We hold the encrypted data but cannot read it.</li>
+<li>If you use an AI feature, the content you choose to send (a document image or document details) is sent to our servers and on to Anthropic to be processed. This is not end-to-end encrypted, because the AI has to read it.</li>
+<li>Crash reports are collected through Firebase Crashlytics.</li>
+<li>Your PIN and biometric data never leave your device.</li>
+</ul>
+<h2>2. Information we handle</h2>
+<h3>2.1 Stored only on your device</h3>
+<p>Documents, images, notes, reminders, categories and settings are stored in an encrypted local database and encrypted files on your device. They are protected by a key derived from your PIN. Optional biometric unlock uses the Android system biometric prompt; we never receive or store your fingerprint or face data. The App's data is excluded from Android cloud backup and device transfer.</p>
+<h3>2.2 Account information (optional)</h3>
+<p>When you register we collect your <strong>email address</strong> and <strong>password</strong>, handled by Supabase Authentication (we never see your password in plain text). We may also store an optional display name, your premium status and your AI credit balance.</p>
+<h3>2.3 Cloud backup (optional, Premium)</h3>
+<p>Document details and images are encrypted on your device with a key derived from your PIN before being uploaded to Supabase. We cannot decrypt them. If you forget your PIN, we cannot recover your backup. Metadata such as your user ID and timestamps is visible to us.</p>
+<h3>2.4 Family sharing (optional)</h3>
+<p>If you create or join a family group we store the group name, membership and roles, invite codes, and the encrypted document snapshots you choose to share. Other members of your group can see what you share with them.</p>
+<h3>2.5 AI features (optional, uses credits)</h3>
+<p>When you use AI extraction, AI summary or the AI checklist, the App sends the following to our Supabase edge functions, which call the <strong>Anthropic Claude API</strong> on our behalf:</p>
+<ul>
+<li>AI extraction: the document image you selected.</li>
+<li>AI summary: document fields (title, type, holder name, document number, issuer, dates, notes, extracted text) and optionally the image.</li>
+<li>AI checklist: the goal text you type.</li>
+</ul>
+<p>Documents containing personal data may be included. Only use these features with content you are comfortable sending. We do not store the image or text you send; our servers forward it to Anthropic and return the result. We record a credit usage entry (reason and time) against your account. AI requests are processed by Anthropic to generate the result and are not used by us for any other purpose; Anthropic processes them under its commercial terms.</p>
+<h3>2.6 Purchases</h3>
+<p>Purchases are made through Google Play. We use <strong>RevenueCat</strong> to validate purchases and manage entitlements. RevenueCat receives your Supabase user ID (as the app user ID), purchase and product information and device/purchase identifiers. Google handles your payment details; we never see them. Our server stores your premium status, credit balance and a log of purchase events (event ID, type, product, your user ID).</p>
+<h3>2.7 Crash reports</h3>
+<p>We use <strong>Firebase Crashlytics</strong> (Google). Crash reports include stack traces, device model, OS version, app version and an installation identifier. We do not intentionally include document content or personal details in crash reports. We may attach non-identifying context such as your tier (free or premium).</p>
+<h3>2.8 Notifications and camera</h3>
+<ul>
+<li>Reminder notifications are scheduled locally on your device. No server is involved.</li>
+<li>The camera is used only to scan documents. You may also import images from your gallery. Images are processed on your device (including on-device text recognition with Google ML Kit) unless you choose an AI feature.</li>
+<li>The App does not send push notifications. Firebase may create an installation ID as part of crash reporting.</li>
+</ul>
+<h3>2.9 Analytics</h3>
+<p>We do not use analytics in this version of the App. If this changes, we will update this policy.</p>
+<h2>3. How we use information</h2>
+<p>To provide the App and its features, secure your account, process purchases and credits, provide cloud backup and family sharing, diagnose crashes and improve stability, prevent abuse, and meet legal obligations. We do not use your data for advertising.</p>
+<h2>4. Service providers (processors)</h2>
+<div class="tw"><table><thead><tr><th>Provider</th><th>Purpose</th><th>Data</th></tr></thead><tbody><tr><td>Supabase</td><td>Authentication, database, storage, edge functions</td><td>Email, user ID, encrypted backups, family data, credit and purchase records</td></tr><tr><td>Anthropic</td><td>AI processing</td><td>Images and text you send to AI features</td></tr><tr><td>RevenueCat and Google Play</td><td>Purchases and entitlements</td><td>User ID, purchase information</td></tr><tr><td>Google Firebase (Crashlytics)</td><td>Crash reporting</td><td>Crash data, device information, installation ID</td></tr></tbody></table></div>
+<p>These providers act on our behalf and under their own terms. We do not sell personal data or share it for advertising. We may disclose information if required by law. Providers may process data in countries other than yours, including the United States. Where required, we rely on appropriate safeguards for such transfers.</p>
+<h2>5. Retention</h2>
+<ul>
+<li>On-device data stays until you delete it or uninstall the App.</li>
+<li>Account data, encrypted backups, family data and credits are kept until you delete your account.</li>
+<li>Purchase event records are kept for accounting and fraud prevention; after account deletion they are no longer linked to your user ID, and are kept only as long as required by law (tax and accounting).</li>
+<li>Crash reports are kept by Firebase for a limited period (Firebase's default is 90 days).</li>
+<li>Account data is deleted on request without undue delay. Residual backups and logs are purged within 30 days.</li>
+</ul>
+<h2>6. Deleting your data</h2>
+<p>In the App go to <strong>Settings → Delete Account</strong> and confirm. This deletes your account, encrypted cloud backups and files, family groups you own, your memberships and shares, your invite codes and your AI credit balance. Unused AI credits are forfeited. You can also request deletion by emailing support@nexsolabs.com, including the email address of your account. Details: see the Delete Account page at <a href="delete-account.html">delete-account.html</a>. Purchases made through Google Play are managed by Google; deleting your account does not cancel or refund them. Uninstalling the App removes on-device data only.</p>
+<h2>7. Your rights</h2>
+<p>Depending on where you live (for example under GDPR or CCPA) you may have rights to access, correct, delete or export your data, to object to or restrict processing, and to complain to your data protection authority. Contact us using the details above. We do not sell or share personal information for cross-context behavioral advertising.</p>
+<h2>8. Security</h2>
+<p>Documents are encrypted with AES-256 on your device; cloud data is encrypted before upload; transmission uses HTTPS/TLS. No system is perfectly secure. Choose a PIN you do not use elsewhere.</p>
+<h2>9. Children</h2>
+<p>The App is not directed to children under 13 (or the higher minimum age in your country, such as 16 in parts of the EU). We do not knowingly collect personal information from children. If you believe a child has given us data, contact us and we will delete it.</p>
+<h2>10. Changes</h2>
+<p>We may update this policy. The date above shows the latest revision; we will notify you in the App for material changes.</p>
+<h2>11. Contact</h2>
+<p>Nexso Labs. Email: support@nexsolabs.com.</p>
+</main>
+<footer class="wrap">&copy; 2026 Nexso Labs. Contact: support@nexsolabs.com.</footer>
+</body>
+</html>
